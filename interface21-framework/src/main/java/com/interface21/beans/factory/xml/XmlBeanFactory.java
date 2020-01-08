@@ -218,7 +218,7 @@ public class XmlBeanFactory extends ListableBeanFactoryImpl {
             logger.info("Loading XmlBeanFactory from InputStream [" + is + "]");
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             logger.debug("Using JAXP implementation [" + factory + "]");
-            factory.setValidating(true);
+            factory.setValidating(false);
             DocumentBuilder db = factory.newDocumentBuilder();
             db.setErrorHandler(new BeansErrorHandler());
             db.setEntityResolver(this.entityResolver != null ? this.entityResolver : new BeansDtdResolver());
