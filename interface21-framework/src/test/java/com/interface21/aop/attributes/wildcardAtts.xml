@@ -3,8 +3,20 @@
   ~ Copyright (c) 2011-2025 PiChen
   -->
 
-<!DOCTYPE beans PUBLIC  "-//SPRING//DTD BEAN//EN"
-        "http://www.springframework.org/dtd/https://raw.githubusercontent.com/peterchenhdu/interface21/master/interface21-framework/src/main/java/com/interface21/beans/factory/xml/spring-beans.dtd">
+<!DOCTYPE xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:aop="http://www.springframework.org/schema/aop"
+        xmlns:mvc="http://www.springframework.org/schema/mvc"
+        xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 <beans>
 
@@ -34,6 +46,5 @@
         </property>
     </bean>
 
-</beans>		
-	
-	
+</beans>
+

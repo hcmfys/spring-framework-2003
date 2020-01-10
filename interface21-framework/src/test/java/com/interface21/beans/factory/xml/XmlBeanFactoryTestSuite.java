@@ -9,6 +9,7 @@
 
 package com.interface21.beans.factory.xml;
 
+import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
@@ -90,7 +91,8 @@ public class XmlBeanFactoryTestSuite extends AbstractListableBeanFactoryTests {
     }
 
     public void testRefToSingleton() throws Exception {
-        InputStream is = getClass().getResourceAsStream("reftypes.xml");
+        InputStream is =new FileInputStream(
+                "E:\\mj-project\\spring-framework-2003\\interface21-framework\\src\\test\\java\\com\\interface21\\beans\\factory\\xml\\reftypes.xml");
         XmlBeanFactory xbf = new XmlBeanFactory(is);
         assertTrue("6 beans in reftypes, not " + xbf.getBeanDefinitionCount(), xbf.getBeanDefinitionCount() == 6);
         TestBean jen = (TestBean) xbf.getBean("jenny");
