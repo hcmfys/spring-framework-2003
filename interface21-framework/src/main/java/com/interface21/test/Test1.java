@@ -15,8 +15,8 @@ public class Test1 {
         XmlBeanFactory xbf = new XmlBeanFactory(is);
         assertTrue("6 beans in reftypes, not " + xbf.getBeanDefinitionCount(), xbf.getBeanDefinitionCount() == 6);
         TestBean jen = (TestBean) xbf.getBean("jenny");
-        TestBean dave = (TestBean) xbf.getBean("david");
-        TestBean jenks = (TestBean) xbf.getBean("jenks");
+       // TestBean dave = (TestBean) xbf.getBean("david");
+       // TestBean jenks = (TestBean) xbf.getBean("jenks");
 
 
     }
